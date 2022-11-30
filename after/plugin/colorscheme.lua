@@ -1,16 +1,3 @@
--- documentation: https://github.com/olimorris/onedarkpro.nvim
-local status_ok, scheme = pcall(require, "onedarkpro")
-if not status_ok then
-    print("Packer could not be loaded...")
-    return
-end
-
-scheme.setup({
-    dark_theme = "onedark_vivid",
-    options = {
-        cursorline = true,
-        transparency = true,
-    }
-})
-
-vim.cmd("colorscheme onedarkpro")
+vim.g.sonokai_transparent_background = 2
+vim.g.sonokai_style = 'espresso'
+vim.cmd("colorscheme sonokai")
