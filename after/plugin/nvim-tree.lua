@@ -25,15 +25,18 @@ nvimtree.setup({
             none = " ",
           },
         },
+        view = {
+            signcolumn = "yes",
+        },
         icons = {
           webdev_colors = true,
-          git_placement = "before",
+          git_placement = "signcolumn",
           padding = " ",
           symlink_arrow = " ➛ ",
           show = {
             file = true,
             folder = true,
-            folder_arrow = true,
+            folder_arrow = false,
             git = true,
           },
           glyphs = {
@@ -51,10 +54,10 @@ nvimtree.setup({
               symlink_open = "",
             },
             git = {
-              unstaged = "X",
-              staged = "S",
-              unmerged = "M",
-              renamed = "➜",
+              unstaged = "+",
+              staged = "~",
+              unmerged = " ",
+              renamed = "R",
               untracked = "U",
               deleted = "-",
               ignored = "◌",
