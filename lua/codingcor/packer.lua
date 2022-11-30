@@ -41,6 +41,7 @@ return packer.startup(function(use)
 
     -- git integration
     use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
+    use "lewis6991/gitsigns.nvim"
     
     -- telescope
     use {
