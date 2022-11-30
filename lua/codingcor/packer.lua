@@ -17,13 +17,6 @@ return packer.startup(function(use)
     use 'wbthomason/packer.nvim'
 
     -- color schemes
-    -- use 'navarasu/onedark.nvim'
-    use 'tanvirtin/monokai.nvim'
-    use "olimorris/onedarkpro.nvim"
-    use "cpea2506/one_monokai.nvim"
-    use 'tomasiser/vim-code-dark'
-    use 'marko-cerovac/material.nvim'
-    use 'projekt0n/github-nvim-theme'
     use 'sainnhe/sonokai'
 
     -- cmp plugins
