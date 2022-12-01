@@ -16,6 +16,9 @@ Keymappings:
  - vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
  - vim.keymap.set('n', '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts)
  - vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<cr>", {silent = true, noremap = true})
+ - vim.keymap.set("n", "<leader>ff", ":Telescope find_files<cr>", opts)
+ - vim.keymap.set("n", "<leader>fb", ":Telescope buffers<cr>", opts)
+ - vim.keymap.set("n", "<leader>fg", ":Telescope live_grep<cr>", opts)
  - vim.keymap.set("", "<Space>", "<Nop>", opts);
  - vim.keymap.set("n", "<C-h>", "<C-w>h", opts)
  - vim.keymap.set("n", "<C-j>", "<C-w>j", opts)
