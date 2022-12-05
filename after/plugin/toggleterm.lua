@@ -4,9 +4,10 @@ if not status_ok then
     return
 end
 
+-- vim.keymap.set("n", "<leader>tt", ":Terminal") -- opens the terminal
 toggleterm.setup({
 	size = 15,
-	open_mapping = [[<leader>t]],
+	open_mapping = [[<leader>tt]],
 	hide_numbers = true,
 	shade_filetypes = {},
 	shade_terminals = true,
