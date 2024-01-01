@@ -54,3 +54,5 @@ lspconfig.dartls.setup{
     }
 }
 
+lspconfig.biome.setup{}
+
