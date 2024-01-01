@@ -1,1 +1,1 @@
-vim.opt.colorcolumn = "50"
+vim.opt_local.colorcolumn = "50"
