@@ -54,5 +54,4 @@ lspconfig.dartls.setup{
     }
 }
 
-lspconfig.biome.setup{}
-
+lspconfig.tsserver.setup{}
