@@ -11,8 +11,6 @@ neogit.setup {
   disable_context_highlighting = false,
   -- Disables signs for sections/items/hunks
   disable_signs = false,
-  -- Do not ask to confirm the commit - just do it when the buffer is closed.
-  disable_commit_confirmation = false,
   -- Changes what mode the Commit Editor starts in. `true` will leave nvim in normal mode, `false` will change nvim to
   -- insert mode, and `"auto"` will change nvim to insert mode IF the commit message is empty, otherwise leaving it in
   -- normal mode.
@@ -23,6 +21,9 @@ neogit.setup {
     interval = 1000,
     enabled = true,
   },
+  -- "ascii"   is the graph the git CLI generates
+  -- "unicode" is the graph like https://github.com/rbong/vim-flog
+  graph_style = "ascii", 
   -- Used to generate URL's for branch popup action "pull request".
   git_services = {
     ["github.com"] = "https://github.com/${owner}/${repository}/compare/${branch_name}?expand=1",
@@ -46,6 +47,8 @@ neogit.setup {
     "NeogitCommitPopup--allow-empty",
     "NeogitRevertPopup--no-edit",
   },
+  -- Set to false if you want to be responsible for creating _ALL_ keymappings
+  use_default_keymaps = true,
   -- Neogit refreshes its internal state after specific events, which can be expensive depending on the repository size.
   -- Disabling `auto_refresh` will make it so you have to manually refresh the status after you open it.
   auto_refresh = true,
@@ -66,7 +69,7 @@ neogit.setup {
     recent_commit_count = 10,
   },
   commit_editor = {
-    kind = "split",
+    kind = "auto",
   },
   commit_select_view = {
     kind = "tab",
@@ -79,16 +82,16 @@ neogit.setup {
     kind = "tab",
   },
   rebase_editor = {
-    kind = "split",
+    kind = "auto",
   },
   reflog_view = {
     kind = "tab",
   },
   merge_editor = {
-    kind = "split",
+    kind = "auto",
   },
   tag_editor = {
-    kind = "split",
+    kind = "auto",
   },
   preview_buffer = {
     kind = "split",
@@ -166,6 +169,27 @@ neogit.setup {
     },
   },
   mappings = {
+    commit_editor = {
+      ["q"] = "Close",
+      ["<c-c><c-c>"] = "Submit",
+      ["<c-c><c-k>"] = "Abort",
+    },
+    rebase_editor = {
+      ["p"] = "Pick",
+      ["r"] = "Reword",
+      ["e"] = "Edit",
+      ["s"] = "Squash",
+      ["f"] = "Fixup",
+      ["x"] = "Execute",
+      ["d"] = "Drop",
+      ["b"] = "Break",
+      ["q"] = "Close",
+      ["<cr>"] = "OpenCommit",
+      ["gk"] = "MoveUp",
+      ["gj"] = "MoveDown",
+      ["<c-c><c-c>"] = "Submit",
+      ["<c-c><c-k>"] = "Abort",
+    },
     finder = {
       ["<cr>"] = "Select",
       ["<c-c>"] = "Close",
@@ -210,9 +234,9 @@ neogit.setup {
       ["<c-s>"] = "StageAll",
       ["u"] = "Unstage",
       ["U"] = "UnstageStaged",
-      ["d"] = "DiffAtFile",
       ["$"] = "CommandHistory",
       ["#"] = "Console",
+      ["Y"] = "YankSelected",
       ["<c-r>"] = "RefreshBuffer",
       ["<enter>"] = "GoToFile",
       ["<c-v>"] = "VSplitOpen",
@@ -223,4 +247,3 @@ neogit.setup {
     },
   },
 }
-
