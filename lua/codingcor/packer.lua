@@ -41,12 +41,12 @@ return packer.startup(function(use)
 
     -- git integration
     use "lewis6991/gitsigns.nvim"
-    use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
+    --use { 'NeogitOrg/neogit', requires = 'nvim-lua/plenary.nvim' }
+    use {"NeogitOrg/neogit", requires = "nvim-lua/plenary.nvim"}
 
     -- telescope
     use {
-      'nvim-telescope/telescope.nvim', tag = '0.1.0',
-    -- or                            , branch = '0.1.x',
+      'nvim-telescope/telescope.nvim', tag = '0.1.4',
       requires = { {'nvim-lua/plenary.nvim'} }
     }
 

@@ -25,9 +25,9 @@ nvimtree.setup({
             none = " ",
           },
         },
-        view = {
-            signcolumn = "yes",
-        },
+        --view = {
+        --    signcolumn = "yes",
+        --},
         icons = {
           webdev_colors = true,
           git_placement = "signcolumn",
