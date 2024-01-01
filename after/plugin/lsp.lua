@@ -37,3 +37,20 @@ lspconfig.ccls.setup{
     }
 }
 
+lspconfig.dartls.setup{
+    on_attach = on_attach,
+    init_options = {
+        closingLabels = false,
+        flutterOutline = false,
+        onlyAnalyzeProjectsWithOpenFiles = false,
+        outline = false,
+        suggestFromUnimportedLibraries = false
+    },
+    settings = {
+      dart = {
+        completeFunctionCalls = false,
+        showTodos = false
+      }
+    }
+}
+

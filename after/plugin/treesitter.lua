@@ -22,7 +22,7 @@ treesitterconfig.setup  {
     },
     indent = {
         enable = true,
-        disable = {""},
+        disable = {"dart"},
     }
 }
 
