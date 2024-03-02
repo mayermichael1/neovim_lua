@@ -1,3 +1,4 @@
 require("codingcor.set")
 require("codingcor.keymap")
-require("codingcor.packer")
+require("codingcor.lazy")
+--require("codingcor.packer")
