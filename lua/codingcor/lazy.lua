@@ -21,50 +21,42 @@ local lazy_status_ok, lazy = pcall(require,"lazy");
 
 lazy.setup({
     -- color schemes
-    'sainnhe/sonokai',
+    {'sainnhe/sonokai', lazy = true},
 
     -- cmp plugins
-     "hrsh7th/nvim-cmp", -- The completion plugin
-     "hrsh7th/cmp-buffer", -- buffer completions
-     "hrsh7th/cmp-path", -- path completions
-     "hrsh7th/cmp-cmdline", -- cmdline completions
-     "saadparwaiz1/cmp_luasnip", -- snippet completions-- completion
+    "hrsh7th/nvim-cmp", -- The completion plugin
+    "hrsh7th/cmp-buffer", -- buffer completions
+    "hrsh7th/cmp-path", -- path completions
+    "hrsh7th/cmp-cmdline", -- cmdline completions
+    "saadparwaiz1/cmp_luasnip", -- snippet completions-- completion
 
-     "hrsh7th/cmp-nvim-lsp", -- lsp source for cmp
-     "hrsh7th/cmp-nvim-lua", -- lua source for cmp
+    "hrsh7th/cmp-nvim-lsp", -- lsp source for cmp
+    "hrsh7th/cmp-nvim-lua", -- lua source for cmp
 
     -- snipping engine
-     "L3MON4D3/LuaSnip", --snippet engine
+    "L3MON4D3/LuaSnip", --snippet engine
 
     -- lsp 
-     "neovim/nvim-lspconfig", -- enable LSP
+    "neovim/nvim-lspconfig", -- enable LSP
 
     -- treesitter
-     {'nvim-treesitter/nvim-treesitter', build = ':TSUpdate'},
-     'nvim-treesitter/playground',
+    {'nvim-treesitter/nvim-treesitter', build = ':TSUpdate'},
+    {'nvim-treesitter/playground', lazy = true},
 
     -- git integration
-     "lewis6991/gitsigns.nvim",
+    { "lewis6991/gitsigns.nvim", lazy = true },
     -- { 'NeogitOrg/neogit', dependencies = 'nvim-lua/plenary.nvim' }
     { "NeogitOrg/neogit", dependencies = {"nvim-lua/plenary.nvim"}},
 
     -- telescope
-     { 'nvim-telescope/telescope.nvim', version = '0.1.4', dependencies =  {'nvim-lua/plenary.nvim' }},
+    { 'nvim-telescope/telescope.nvim', version = '0.1.4', dependencies =  {'nvim-lua/plenary.nvim' }},
 
     -- file explorer
-     {
-       'nvim-tree/nvim-tree.lua',
-        dependencies = {
-            'nvim-tree/nvim-web-devicons', -- optional, for file icons
-        },
-    },
+    { 'nvim-tree/nvim-tree.lua', dependencies = { 'nvim-tree/nvim-web-devicons', opt = true}}, -- optional, for file icons ,
 
     -- status line
-    {
-        'nvim-lualine/lualine.nvim',
-        dependencies = { 'kyazdani42/nvim-web-devicons', opt = true }
-    },
+    { 'nvim-lualine/lualine.nvim', dependencies = { 'kyazdani42/nvim-web-devicons', opt = true } },
 
     --terminal
-     "akinsho/toggleterm.nvim"
+    "akinsho/toggleterm.nvim"
 });
