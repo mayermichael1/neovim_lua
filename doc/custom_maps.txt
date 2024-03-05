@@ -2,6 +2,12 @@
 *custom_maps* 
 
 Keymappings: 
+ - -- vim.keymap.set("n", "<leader>tt", ":Terminal") -- opens the terminal
+ - vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<cr>", {silent = true, noremap = true}) -- show file explorer
+ - vim.keymap.set("n", "<leader>ff", ":Telescope find_files<cr>", opts) -- search files
+ - vim.keymap.set("n", "<leader>fb", ":Telescope buffers<cr>", opts) -- search buffers
+ - vim.keymap.set("n", "<leader>fg", ":Telescope live_grep<cr>", opts) -- search with grep
+ - vim.keymap.set("n", "<leader>fo", grep_in_buffer, opts); -- search in open buffers
  - vim.keymap.set('n', 'gl', vim.diagnostic.open_float, opts) -- show diagnostic
  - vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts) -- previous diagnostic
  - vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts) -- next diagnotic
@@ -16,11 +22,6 @@ Keymappings:
  - vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts) -- code action
  - vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts) -- show references
  - vim.keymap.set('n', '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts) -- format
- - vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<cr>", {silent = true, noremap = true}) -- show file explorer
- - vim.keymap.set("n", "<leader>ff", ":Telescope find_files<cr>", opts) -- search files
- - vim.keymap.set("n", "<leader>fb", ":Telescope buffers<cr>", opts) -- search buffers
- - vim.keymap.set("n", "<leader>fg", ":Telescope live_grep<cr>", opts) -- search with grep
- - -- vim.keymap.set("n", "<leader>tt", ":Terminal") -- opens the terminal
  - vim.keymap.set("", "<Space>", "<Nop>", opts); -- leader key
  - vim.keymap.set("n", "<C-h>", "<C-w>h", opts) -- move to the left window
  - vim.keymap.set("n", "<C-j>", "<C-w>j", opts) -- move to the bottom window
