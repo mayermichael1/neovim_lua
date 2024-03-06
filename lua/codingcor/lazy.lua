@@ -58,5 +58,10 @@ lazy.setup({
     { 'nvim-lualine/lualine.nvim', dependencies = { 'kyazdani42/nvim-web-devicons', opt = true } },
 
     --terminal
-    "akinsho/toggleterm.nvim"
+    "akinsho/toggleterm.nvim",
+
+    -- useless stuff
+    {'eandrju/cellular-automaton.nvim' , lazy = true},
+    {'alec-gibson/nvim-tetris', lazy = true},
+    
 });
