@@ -28,13 +28,12 @@ lazy.setup({
     "hrsh7th/cmp-buffer", -- buffer completions
     "hrsh7th/cmp-path", -- path completions
     "hrsh7th/cmp-cmdline", -- cmdline completions
-    "saadparwaiz1/cmp_luasnip", -- snippet completions-- completion
-
     "hrsh7th/cmp-nvim-lsp", -- lsp source for cmp
     "hrsh7th/cmp-nvim-lua", -- lua source for cmp
 
     -- snipping engine
-    "L3MON4D3/LuaSnip", --snippet engine
+    {"L3MON4D3/LuaSnip", version = "v2.*"}, --snippet engine
+    "saadparwaiz1/cmp_luasnip", -- snippet completions-- completion
 
     -- lsp 
     "neovim/nvim-lspconfig", -- enable LSP
