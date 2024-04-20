@@ -2,6 +2,10 @@
 *custom_maps* 
 
 Keymappings: 
+ - vim.keymap.set({"i"}, "<C-K>", function() luasnip.expand() end, {silent = true})
+ - vim.keymap.set({"i", "s"}, "<C-L>", function() luasnip.jump( 1) end, {silent = true})
+ - vim.keymap.set({"i", "s"}, "<C-J>", function() luasnip.jump(-1) end, {silent = true})
+ - vim.keymap.set({"i", "s"}, "<C-E>", function()
  - -- vim.keymap.set("n", "<leader>tt", ":Terminal") -- opens the terminal
  - vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<cr>", {silent = true, noremap = true}) -- show file explorer
  - vim.keymap.set("n", "<leader>ff", ":Telescope find_files<cr>", opts) -- search files
