@@ -24,6 +24,9 @@ local on_attach = function(client, bufnr)
     vim.keymap.set('n', '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts) -- format
 end
 
+-- ccls setup
+-- c
+-- cpp
 lspconfig.ccls.setup{
     on_attach = on_attach,
     init_options = {
@@ -37,6 +40,8 @@ lspconfig.ccls.setup{
     }
 }
 
+-- dartls server setup
+-- dart
 lspconfig.dartls.setup{
     on_attach = on_attach,
     init_options = {
@@ -54,4 +59,11 @@ lspconfig.dartls.setup{
     }
 }
 
+-- typescript server setup
+-- typescript
+-- javascript
 lspconfig.tsserver.setup{}
+
+-- phpactor server setup
+-- php
+lspconfig.phpactor.setup{}
