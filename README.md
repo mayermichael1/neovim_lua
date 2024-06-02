@@ -46,3 +46,22 @@ To open and close fold:
 ```
 za
 ```
+
+# Keymaps 
+
+To see all the keymaps for a given mode following command may be used:
+
+```
+:nmap
+:verbose nmap
+:nmap <leader>
+```
+
+This commands would list all normal mode mappings. 
+The last command shows all normal mode mappings startign with the **leader** key. 
+
+```
+:Telescope keymaps
+```
+
+This command opens all keymaps in Telescope for searching.
