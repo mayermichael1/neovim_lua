@@ -88,3 +88,13 @@ end
 dap.listeners.after.event_exited['dapui'] = function()
     dapui.close();
 end
+
+-- enabel virtual text
+
+local dap_virtual_text_ok, dap_virtual_text = pcall(require, "nvim-dap-virtual-text")
+if not dap_virtual_text_ok then
+    print("DAP Virtual text could not be loaded")
+    return
+end
+
+dap_virtual_text.setup();
