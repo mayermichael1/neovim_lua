@@ -65,3 +65,13 @@ The last command shows all normal mode mappings startign with the **leader** key
 ```
 
 This command opens all keymaps in Telescope for searching.
+
+# Debugging
+
+Debugging works using the dap protocoll. To start a debugging session do the following:
+
+1. optionally create breakpoints in your code (`<leader>b` or `:DapToggleBreakpoint`)
+2. run the program (`:DapContinue` or `<leader>dc`) this start the debugging ui
+3. Debug the Program
+4. Terminate the Debugging Session by either running till the end or force terminate
+(`<leader>dt` or `:DapTerminate`)
