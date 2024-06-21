@@ -75,3 +75,7 @@ Debugging works using the dap protocoll. To start a debugging session do the fol
 3. Debug the Program
 4. Terminate the Debugging Session by either running till the end or force terminate
 (`<leader>dt` or `:DapTerminate`)
+
+# TODOs
+
+[ ] test if the float term can be replaced by default neovim terminal
