@@ -21,7 +21,7 @@ local on_attach = function(client, bufnr)
     vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, bufopts) -- rename using lsp
     vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts) -- code action
     vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts) -- show references
-    vim.keymap.set('n', '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts) -- format
+    --vim.keymap.set('n', '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts) -- format
 end
 
 -- ccls setup
