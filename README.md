@@ -87,3 +87,4 @@ Commmands like `:vimgrep`,`:grep` or`:make` will also result in a quickfix.
 - [ ] test if the float term can be replaced by default neovim terminal
 - [ ] diffview for git merges
 - [ ] proper debugging implementation
+- [ ] make command neovim
