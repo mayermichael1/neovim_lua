@@ -84,4 +84,6 @@ All Telescope searches can be turned into quickfix lists by pressing 'C-q'.
 
 # TODOs
 
-[ ] test if the float term can be replaced by default neovim terminal
+- [ ] test if the float term can be replaced by default neovim terminal
+- [ ] diffview for git merges
+- [ ] proper debugging implementation
