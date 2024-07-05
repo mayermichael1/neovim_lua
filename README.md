@@ -79,8 +79,8 @@ Debugging works using the dap protocoll. To start a debugging session do the fol
 # Quickfix List
 
 Open a quickfix list: `:copen` or `:cwindow`.
-
 All Telescope searches can be turned into quickfix lists by pressing 'C-q'.
+Commmands like `:vimgrep`,`:grep` or`:make` will also result in a quickfix.
 
 # TODOs
 
