@@ -80,6 +80,8 @@ Debugging works using the dap protocoll. To start a debugging session do the fol
 
 Open a quickfix list: `:copen` or `:cwindow`.
 
+All Telescope searches can be turned into quickfix lists by pressing 'C-q'.
+
 # TODOs
 
 [ ] test if the float term can be replaced by default neovim terminal
