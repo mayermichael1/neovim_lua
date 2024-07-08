@@ -19,7 +19,7 @@ vim.opt.showmatch = true
 vim.opt.wrap = false
 
 -- disable mouse completely
--- vim.opt.mouse=""
+vim.opt.mouse=""
 
 -- don't check for vim modelines
 vim.opt.modelines=0
