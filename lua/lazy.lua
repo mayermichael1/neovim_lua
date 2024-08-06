@@ -22,6 +22,7 @@ local lazy_status_ok, lazy = pcall(require,"lazy");
 lazy.setup({
     -- color schemes
     {'sainnhe/sonokai', lazy = true},
+    {'sainnhe/gruvbox-material', lazy = false},
 
     -- cmp plugins
     "hrsh7th/nvim-cmp", -- The completion plugin
