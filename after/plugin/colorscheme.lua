@@ -7,5 +7,6 @@ vim.g.sonokai_disable_italic_comment = 1;
 
 -- gruvbox theme
 vim.g.gruvbox_material_foreground='original'
-vim.g.gruvbox_material_enable_italic = true
+vim.g.gruvbox_material_disable_italic_comment=1
+--vim.g.gruvbox_material_enable_italic = true
 vim.cmd.colorscheme("gruvbox-material")
