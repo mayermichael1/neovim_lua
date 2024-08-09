@@ -33,7 +33,7 @@ vim.opt.showmode = true
 vim.opt.cmdheight = 1
 vim.opt.signcolumn = "yes"
 vim.opt.colorcolumn = "80"
-vim.opt.showtabline = 2
+vim.opt.showtabline = 1
 vim.opt.termguicolors = true
 
 -- auto formating
