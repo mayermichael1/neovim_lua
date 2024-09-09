@@ -4,6 +4,6 @@ if not status_ok then
     return
 end
 
-vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<cr>", {silent = true, noremap = true}) -- show file explorer
+--vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<cr>", {silent = true, noremap = true}) -- show file explorer
 
-nvimtree.setup({})
+--nvimtree.setup({})
