@@ -62,7 +62,8 @@ lspconfig.dartls.setup{
 -- typescript server setup
 -- typescript
 -- javascript
-lspconfig.tsserver.setup{}
+-- deprecated
+--lspconfig.tsserver.setup{}
 
 -- phpactor server setup
 -- php
