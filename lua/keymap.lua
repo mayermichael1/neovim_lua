@@ -30,8 +30,8 @@ vim.g.maplocalleader = " "
 --vim.keymap.set("n", "<C-Rigth>", ":vertical resize +2<cr>", opts) -- resize horizontal +
 
 -- navigate buffers
-vim.keymap.set("n", "<S-l>", ":bnext<cr>", opts) -- next buffer
-vim.keymap.set("n", "<S-h>", ":bprevious<cr>", opts) -- previous buffer
+--vim.keymap.set("n", "<S-l>", ":bnext<cr>", opts) -- next buffer
+--vim.keymap.set("n", "<S-h>", ":bprevious<cr>", opts) -- previous buffer
 
 -- insert mode
 --vim.keymap.set("i", "jk", "<ESC>", opts) -- exist insert mode
