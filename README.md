@@ -84,7 +84,39 @@ Commmands like `:vimgrep`,`:grep` or`:make` will also result in a quickfix.
 
 # TODOs
 
-- [ ] test if the float term can be replaced by default neovim terminal
 - [ ] diffview for git merges
-- [ ] proper debugging implementation
 - [ ] make command neovim
+
+# How to Do 90% of What Plugins Do (With Just Vim)
+
+[Youtube Reference](https://youtu.be/XA2WjJbmmoM?si=yjhcu9XwWDJeAjIV)
+
+## Code Navigation
+
+```bash
+ctags `find . -name "*.[ch]" -print` 
+```
+
+With `ctags` a tag file can be created containing all relevant tags for a 
+project. Neovim reads this tags file automatically. You can complete tags with 
+`CTRL+n` and already existing tag can be jumped to by `CRTL+]` to leave this jump 
+use `CTRL+t`.
+
+This should also works quite well with large projects.
+
+## Find Files
+
+First following options have to be set
+
+```
+set path+=**
+set wildmenu
+```
+
+Then following commands can be used for file searching:
+
+```
+:find  
+```
+
+This search list can be tab expanded and searches all subdirectories.
