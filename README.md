@@ -82,6 +82,42 @@ Open a quickfix list: `:copen` or `:cwindow`.
 All Telescope searches can be turned into quickfix lists by pressing 'C-q'.
 Commmands like `:vimgrep`,`:grep` or`:make` will also result in a quickfix.
 
+# Filename Registers
+
+The register `%` contains the current's file name. The register `#` contains
+the last opened file name.
+
+Example: pasting current filename to the buffer
+```
+"%p
+```
+
+Example: Full filename to the buffer
+```
+:let @" = expand("%")
+p
+```
+
+# Current Working Directory
+
+Print current working directory:
+
+```
+:pwd
+```
+
+change the current working directory:
+
+```
+:cd <directory>
+```
+
+change the current working directory to the directory containing the file:
+
+```
+:cd %:p:h
+```
+
 # TODOs
 
 - [ ] diffview for git merges
