@@ -82,7 +82,9 @@ Open a quickfix list: `:copen` or `:cwindow`.
 All Telescope searches can be turned into quickfix lists by pressing 'C-q'.
 Commmands like `:vimgrep`,`:grep` or`:make` will also result in a quickfix.
 
-# Filename Registers
+# Tips and Tricks
+
+## Filename Registers
 
 The register `%` contains the current's file name. The register `#` contains
 the last opened file name.
@@ -98,7 +100,7 @@ Example: Full filename to the buffer
 p
 ```
 
-# Current Working Directory
+## Current Working Directory
 
 Print current working directory:
 
@@ -117,6 +119,33 @@ change the current working directory to the directory containing the file:
 ```
 :cd %:p:h
 ```
+
+## UPPER and lower case
+
+In visual mode press `u` to lower case the visual selection and `U` to upper case 
+the selection;
+
+## Incrementing Numbers
+
+`CTRL-A` and `CTRL-X` can be used to increment a decrement the number under the 
+current cursor.
+
+Following command can be used to create following example:
+```
+0
+0
+0
+0
+0
+->
+1
+2
+3
+4
+5
+```
+
+visually select all the lines then `gCTRL-A`.
 
 # TODOs
 
