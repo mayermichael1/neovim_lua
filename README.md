@@ -149,8 +149,9 @@ visually select all the lines then `gCTRL-A`.
 
 # TODOs
 
-- [ ] diffview for git merges
-- [ ] make command neovim
+- diffview for git merges
+- make command neovim
+- get rid of must plugins  
 
 # How to Do 90% of What Plugins Do (With Just Vim)
 
