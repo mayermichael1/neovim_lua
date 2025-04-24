@@ -147,6 +147,31 @@ Following command can be used to create following example:
 
 visually select all the lines then `gCTRL-A`.
 
+## execute normal mode commands for selection
+
+`norm[al]` can be used to execute normal mode commands for a specific selection.
+
+Examples:
+
+```
+:% norm! @a 
+```
+
+Execute macro a on all lines of the current buffer.
+
+```
+:'<,'> norm! @a
+```
+
+Execute macro a on all lines in the visual selection.
+
+```
+:g/pattern/ norm! @a
+```
+
+Executre macrr a on all lines matching pattern.
+
+
 # TODOs
 
 - diffview for git merges
