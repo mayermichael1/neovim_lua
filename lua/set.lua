@@ -1,5 +1,5 @@
 -- line numbering
-vim.opt.nu = true
+-- vim.opt.number = true
 vim.opt.relativenumber = true
 
 -- tabs
