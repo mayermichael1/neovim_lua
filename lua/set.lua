@@ -1,5 +1,6 @@
 -- line numbering
--- vim.opt.number = true
+-- TODO: sometimes the window moves weirdly when the code base is to big
+vim.opt.number = true
 vim.opt.relativenumber = true
 
 -- tabs
