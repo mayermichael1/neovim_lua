@@ -42,6 +42,7 @@ lazy.setup({
 
     -- treesitter
     {'nvim-treesitter/nvim-treesitter', build = ':TSUpdate'},
+    {'nvim-treesitter/nvim-treesitter-context', lazy = true},
     {'nvim-treesitter/playground', lazy = true},
 
     -- git integration
