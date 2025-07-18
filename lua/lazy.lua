@@ -47,7 +47,6 @@ lazy.setup({
 
     -- git integration
     { "lewis6991/gitsigns.nvim", lazy = true },
-    -- { 'NeogitOrg/neogit', dependencies = 'nvim-lua/plenary.nvim' }
     { "NeogitOrg/neogit", dependencies = {"nvim-lua/plenary.nvim"}},
 
     -- telescope
