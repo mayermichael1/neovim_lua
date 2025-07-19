@@ -88,11 +88,6 @@ lazy.setup({
     --terminal
     --"akinsho/toggleterm.nvim",
 
-    -- debugging
-    --"mfussenegger/nvim-dap",
-    --{ "rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} },
-    --{ 'theHamsta/nvim-dap-virtual-text', dependencies = {"mfussenegger/nvim-dap"}},
-
     -- useless stuff
     {'eandrju/cellular-automaton.nvim' , lazy = true},
     {'alec-gibson/nvim-tetris', lazy = true},
