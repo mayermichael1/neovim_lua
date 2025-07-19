@@ -46,15 +46,23 @@ lazy.setup({
     {'nvim-treesitter/playground', lazy = true},
 
     -- git integration
-    { "lewis6991/gitsigns.nvim", lazy = true },
-    { "NeogitOrg/neogit", dependencies = {"nvim-lua/plenary.nvim"}},
+    { "lewis6991/gitsigns.nvim", lazy = false},
+    { "NeogitOrg/neogit", lazy = false, dependencies = {"nvim-lua/plenary.nvim"}},
 
     -- telescope
     { 'nvim-telescope/telescope.nvim', version = '0.1.4', dependencies =  {'nvim-lua/plenary.nvim' }},
 
     -- file explorer
     { 'nvim-tree/nvim-tree.lua', dependencies = { 'nvim-tree/nvim-web-devicons', opt = true}}, -- optional, for file icons ,
-    { 'stevearc/oil.nvim', opts = {}, dependencies = { { "echasnovski/mini.icons", opts = {} } }, },
+    { 'stevearc/oil.nvim', 
+        dependencies = { { "echasnovski/mini.icons", opts = {} } },
+        opts = {
+            view_options = {show_hidden = true}
+        },
+        init = function()
+            vim.keymap.set("n", "<leader>e", ":Oil<cr>", {silent = true, noremap = true}) -- show file explorer
+        end
+    },
 
     -- status line
     { 'nvim-lualine/lualine.nvim', dependencies = { 'kyazdani42/nvim-web-devicons', opt = true } },
