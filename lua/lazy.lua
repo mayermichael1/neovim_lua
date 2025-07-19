@@ -34,7 +34,27 @@ lazy.setup({
     "hrsh7th/cmp-nvim-lua", -- lua source for cmp
 
     -- snipping engine
-    {"L3MON4D3/LuaSnip", version = "v2.*"}, --snippet engine
+    {"L3MON4D3/LuaSnip",
+        version = "v2.*",
+        init = function()
+            local luasnip = require("luasnip");
+            vim.keymap.set({"i"}, "<C-K>", function() luasnip.expand() end, {silent = true})
+            vim.keymap.set({"i", "s"}, "<C-J>", function() luasnip.jump( 1) end, {silent = true})
+            vim.keymap.set({"i", "s"}, "<C-L>", function() luasnip.jump(-1) end, {silent = true})
+
+            --vim.keymap.set({"i", "s"}, "<C-E>", function()
+            --	if luasnip.choice_active() then
+            --		luasnip.change_choice(1)
+            --	end
+            --end, {silent = true})
+
+            require("luasnip.loaders.from_snipmate").load();
+            -- this loads snippets in snipmate format from snippets directory
+            require("luasnip.loaders.from_snipmate").lazy_load({paths = "../snippets"})
+            -- this would load snippets in visual studio code format
+            -- require("luasnip.loaders.from_vscode").lazy_load({ paths = { "./my-cool-snippets" } })
+        end
+    }, --snippet engine
     "saadparwaiz1/cmp_luasnip", -- snippet completions-- completion
 
     -- lsp 
