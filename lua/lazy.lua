@@ -65,7 +65,25 @@ lazy.setup({
     },
 
     -- status line
-    { 'nvim-lualine/lualine.nvim', dependencies = { 'kyazdani42/nvim-web-devicons', opt = true } },
+    { 'nvim-lualine/lualine.nvim',
+        dependencies = { 'kyazdani42/nvim-web-devicons', opt = true },
+        opts = {
+            options = {
+                theme = "auto",
+                component_separators = { left = '', right = ''},
+                section_separators = { left = '', right = ''},
+                globalstatus = true,
+            },
+            tabline = {
+                lualine_a = {'buffers'},
+                lualine_b = {},
+                lualine_c = {},
+                lualine_x = {},
+                lualine_y = {},
+                lualine_z = {'tabs'},
+            },
+        }
+    },
 
     --terminal
     --"akinsho/toggleterm.nvim",
