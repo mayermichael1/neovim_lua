@@ -13,7 +13,7 @@ When starting nvim for the first time all plugins should be loaded automatically
 ## Language Servers and Code highlighting
 
 A few LSP configuration are already made. 
-Disable or enable the configurations for a language in `./after/plugin/lsp.lua` as you see fit.
+Disable or enable the configurations for a language in `./lua/plugins/lsp.lua` as you see fit.
 To enable Code highlighting the correspoding TreeSitter configuration has to be installed. 
 Use `:TSInstall [language]` to install the code highlighting for a specific language.
 
@@ -29,23 +29,6 @@ To change the root directory of NVIM-Tree `CTRL+]` may be pressed on the current
 # Snippets
 
 snippets in the snipmate format are placed in `./snippets`.
-
-# Folds
-
-To create a toggle:
-
-```
-zf{motion}
-
-//create fold for whole function
-zfa}
-```
-
-To open and close fold:
-
-```
-za
-```
 
 # Keymaps 
 
@@ -76,15 +59,37 @@ Debugging works using the dap protocoll. To start a debugging session do the fol
 4. Terminate the Debugging Session by either running till the end or force terminate
 (`<leader>dt` or `:DapTerminate`)
 
-# Quickfix List
+# Tips and Tricks
+
+## Folds
+
+To create a toggle:
+
+```
+zf{motion}
+
+//create fold for whole function
+zfa}
+```
+
+To open and close fold:
+
+```
+za
+```
+
+## Filename Registers
+
+## Quickfix List
 
 Open a quickfix list: `:copen` or `:cwindow`.
 All Telescope searches can be turned into quickfix lists by pressing 'C-q'.
 Commmands like `:vimgrep`,`:grep` or`:make` will also result in a quickfix.
 
-# Tips and Tricks
+## Inserting in Command or Insert Mode
 
-## Filename Registers
+With `CTRL-R{register}` like `CTRL-R 0` the specified register can be inserted 
+into the current buffer or command line in command or insert mode.
 
 The register `%` contains the current's file name. The register `#` contains
 the last opened file name.
