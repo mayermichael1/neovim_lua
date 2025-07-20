@@ -61,17 +61,6 @@ za
 
 ## Filename Registers
 
-## Quickfix List
-
-Open a quickfix list: `:copen` or `:cwindow`.
-All Telescope searches can be turned into quickfix lists by pressing 'C-q'.
-Commmands like `:vimgrep`,`:grep` or`:make` will also result in a quickfix.
-
-## Inserting in Command or Insert Mode
-
-With `CTRL-R{register}` like `CTRL-R 0` the specified register can be inserted 
-into the current buffer or command line in command or insert mode.
-
 The register `%` contains the current's file name. The register `#` contains
 the last opened file name.
 
@@ -85,6 +74,17 @@ Example: Full filename to the buffer
 :let @" = expand("%")
 p
 ```
+
+## Quickfix List
+
+Open a quickfix list: `:copen` or `:cwindow`.
+All Telescope searches can be turned into quickfix lists by pressing 'C-q'.
+Commmands like `:vimgrep`,`:grep` or`:make` will also result in a quickfix.
+
+## Inserting in Command or Insert Mode
+
+With `CTRL-R{register}` like `CTRL-R 0` the specified register can be inserted 
+into the current buffer or command line in command or insert mode.
 
 ## Current Working Directory
 
