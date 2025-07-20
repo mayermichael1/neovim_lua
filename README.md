@@ -42,6 +42,18 @@ This command opens all keymaps in Telescope for searching.
 
 # Tips and Tricks
 
+## Spell Checking 
+
+Built-in Spell checking can be enabled by using following command:
+
+``` 
+:setlocal spell spelllang=en
+```
+
+After using this command miss-spelled words will appear underlined. To check 
+these words for corret spelling use `z=` on the word that is miss-pelled.
+
+
 ## Folds
 
 To create a toggle:
