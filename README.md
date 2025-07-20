@@ -10,21 +10,12 @@ nvim .
 
 When starting nvim for the first time all plugins should be loaded automatically.
 
-## Language Servers and Code highlighting
+# Language Servers and Code highlighting
 
 A few LSP configuration are already made. 
 Disable or enable the configurations for a language in `./lua/plugins/lsp.lua` as you see fit.
 To enable Code highlighting the correspoding TreeSitter configuration has to be installed. 
 Use `:TSInstall [language]` to install the code highlighting for a specific language.
-
-# NVIM Tree 
-
-By default all files ignored by `.gitignore` are not shown by nvim-tree by default.
-To also these Files this behaviour can be toggled with `I`
-
-To show or hide hidden files `H` may be pressed.
-
-To change the root directory of NVIM-Tree `CTRL+]` may be pressed on the current directory.
 
 # Snippets
 
