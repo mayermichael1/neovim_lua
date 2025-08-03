@@ -7,7 +7,16 @@ vim.api.nvim_create_autocmd('TermOpen',
     end
 })
 
+function open_term()
+    vim.cmd("tab term")
+end
+
 vim.keymap.set("n", "<leader>rt", function()
+    if (term_id == 0)
+    then
+        open_term()
+    end
+
     if (term_id ~= 0) 
     then
         local command = vim.fn.input("Command to run in terminal: ")
