@@ -8,6 +8,12 @@ git clone https://github.com/codingcor/neovim_lua .
 nvim .
 ```
 
+Dependencies:
+
+```
+ripgrep
+```
+
 When starting nvim for the first time all plugins should be loaded automatically.
 
 # Language Servers and Code highlighting
