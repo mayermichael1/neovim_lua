@@ -23,6 +23,13 @@ Disable or enable the configurations for a language in `./lua/plugins/lsp.lua` a
 To enable Code highlighting the correspoding TreeSitter configuration has to be installed. 
 Use `:TSInstall [language]` to install the code highlighting for a specific language.
 
+For default keybindings look at: 
+
+```
+:help lsp-default
+:help diagnostic-defaults
+```
+
 # Snippets
 
 snippets in the snipmate format are placed in `./snippets`.
