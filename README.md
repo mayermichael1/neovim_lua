@@ -8,10 +8,10 @@ git clone https://github.com/codingcor/neovim_lua .
 nvim .
 ```
 
-Dependencies:
+Dependencies: (!This are ArchLinux package names)
 
 ```
-ripgrep
+ripgrep ttf-nerd-fonts-symbols
 ```
 
 When starting nvim for the first time all plugins should be loaded automatically.
