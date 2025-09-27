@@ -27,5 +27,5 @@ vim.keymap.set("n", "<leader>tr", function(command)
 end)
 
 vim.keymap.set("n", "<leader>tb", function(command)
-    run_in_terminal("bake");
+    run_in_terminal("make");
 end)
