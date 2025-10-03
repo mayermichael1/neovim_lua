@@ -53,6 +53,12 @@ The last command shows all normal mode mappings startign with the **leader** key
 
 This command opens all keymaps in Telescope for searching.
 
+# Project local settings
+
+In a Project structure the file `.nvim.lua` can be created which will be 
+automatically sourced when nvim is started in this directory. 
+The first time Neovim asks to trust the configuration file.
+
 # Tips and Tricks
 
 ## Spell Checking 

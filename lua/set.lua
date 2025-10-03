@@ -67,3 +67,6 @@ vim.g.loaded_netrwPlugin = 1
 -- for comp
 -- vim.opt.completeopt = {"menuone", "noinsert"}
 vim.opt.syntax = "off"
+
+-- load local settings
+vim.opt.exrc = true
