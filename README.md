@@ -69,9 +69,19 @@ Built-in Spell checking can be enabled by using following command:
 :setlocal spell spelllang=en
 ```
 
+Or in lua:
+
+```
+vim.opt.spell = true
+vim.opt.spelllang = "de"
+```
+
 After using this command miss-spelled words will appear underlined. To check 
 these words for corret spelling use `z=` on the word that is miss-pelled.
 
+Other languages than "en" need a spelling file *.spl in `/home/$USER/.local/share/nvim/site/spell`.
+These files should be downloaded automatically. This however does not work.
+These files can be downloaded from: [Spell File FTP](https://ftp.nluug.nl/vim/runtime/spell)
 
 ## Folds
 
