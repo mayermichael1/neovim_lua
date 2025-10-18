@@ -1,4 +1,134 @@
-snippet \beg begin and end environment 
+# General
+snippet \begin begin and end environment 
     \begin{$1}
         $2
     \end{$1}
+
+snippet \figure renders a picture (requires graphicx)
+    \begin{figure}[h!]
+        \includegraphics[scale=1]{./$1}
+        \label{$2}
+        \caption{$3}
+    \end{figure}
+
+
+snippet \table adds a table
+    \begin{table}[h!]
+        \begin{center}
+            \begin{tabular}{$1}
+                $2
+                \hline
+                $3
+           \end{tabular} 
+        \end{center}
+    \end{table}
+
+## Text Formatting
+
+snippet ** bold text
+    \textbf{$1}
+
+snippet * italic text
+    \textit{$1}
+
+snippet \href link (requires hyperref)
+    \href{$1}{$2}
+
+snippet \itemize unordered list
+ \begin{itemize}
+    \item   $1
+ \end{itemize}
+
+snippet - unordered list
+ \begin{itemize}
+    \item   $1
+ \end{itemize}
+
+snippet \enumerate ordered list
+ \begin{enumerate}
+    \item   $1
+ \end{enumerate}
+
+snippet 1. ordered list
+ \begin{enumerate}
+    \item   $1
+ \end{enumerate}
+
+snippet \description description list
+    \begin{description}
+        \item   [$1]
+            $2
+    \end{description}
+
+## Headings
+
+snippet # Heading 1
+    \section{$1}
+
+snippet ## Heading 2
+    \subsection{$1}
+
+snippet ### Heading 3
+    \subsubsection{$1}
+
+# Math
+#
+snippet _ subtext
+    _{$1}
+
+snippet ^ supertext
+    ^{$1}
+
+snippet $ inline equation
+    $$1$
+
+snippet \equation equation
+    \begin{equation*}
+        $1
+    \end{equation*}
+
+snippet \align align math equation (required amsmath)
+    \begin{align*}
+        $1
+    \end{align*}
+
+snippet \frac fraction
+    \frac{$1}{$2}
+
+snippet \pmatrix
+    \begin{pmatrix}
+       $1 
+    \end{pmatrix}
+
+snippet \bmatrix
+    \begin{bmatrix}
+       $1 
+    \end{bmatrix}
+
+snippet \matrix
+    \begin{matrix}
+       $1 
+    \end{matrix}
+
+# Science
+
+snippet \si SI unit (required suinitx)
+    \SI{$1}{$2}
+
+# Figures and Graphics
+
+snippet \plot plot (required tikz)
+    \begin{tikzpicture}[domain=0:10]
+        \draw[step=0.5, very thin, gray!25] (0, -1) grid (10, 1);
+        \draw[->] (0, -1) -- (0,1) node[right]{$y$};
+        \draw[->] (0, 0) -- (10,0) node[below]{$x$};
+
+        \draw plot (\x,{sin(\x r)});
+    \end{tikzpicture}
+
+snippet \coord coordinate system (required tikz)
+    \begin{tikzpicture}[domain=-5:5]
+        \draw[step=0.5, very thin, gray!25] (-5, -5) grid (5, 5);
+        \draw[->] (0, -5) -- (0,5) node[right]{$y$};
+        \draw[->] (-5, 0) -- (5,0) node[below]{$x$};
+    \end{tikzpicture}
