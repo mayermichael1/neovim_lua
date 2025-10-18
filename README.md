@@ -34,6 +34,8 @@ For default keybindings look at:
 
 snippets in the snipmate format are placed in `./snippets`.
 
+Maybe replace with: [Builtin Snippets](https://www.reddit.com/r/neovim/comments/1cxfhom/builtin_snippets_so_good_i_removed_luasnip/)
+
 # Keymaps 
 
 To see all the keymaps for a given mode following command may be used:
