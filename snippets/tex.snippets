@@ -143,3 +143,27 @@ snippet \coord coordinate system (required tikz)
         \draw[->] (0, -5) -- (0,5) node[right]{$y$};
         \draw[->] (-5, 0) -- (5,0) node[below]{$x$};
     \end{tikzpicture}
+
+# Circuits 
+#
+snippet \pgkcircuit include circuittikz
+    \usepackage[european,straightvoltages]{circuitikz}
+
+snippet \circuit circuit (requires \usepackage[european,straightvoltages]{circuitikz} also tikz)
+    \begin{figure}[h!]
+        \center
+        \begin{circuitikz}
+            \draw(0,0)
+                to[V=$U_q$] (0,2)
+                to[short] (2,2)
+                to[R=$R_A$,v=$U_R$] (2,0)
+                to[short] (0,0);
+
+            \draw(2,2)
+                to[short,*-o] (3,2);
+            \draw(2,0)
+                to[short,*-o] (3,0);
+        \end{circuitikz}
+        \label{$1}
+        \caption{$2}
+    \end{figure}
