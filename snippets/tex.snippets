@@ -154,7 +154,7 @@ snippet \circuit circuit (requires \usepackage[european,straightvoltages]{circui
         \center
         \begin{circuitikz}
             \draw(0,0)
-                to[V=$$U_q$] (0,2)
+                to[V<=$$U_q$] (0,2)
                 to[short] (2,2)
                 to[R=$$R_A$,v=$$U_R$] (2,0)
                 to[short] (0,0);
