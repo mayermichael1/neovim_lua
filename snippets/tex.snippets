@@ -5,8 +5,8 @@ snippet \begin begin and end environment
     \end{$1}
 
 snippet \figure renders a picture (requires graphicx)
-    \begin{figure}[h!]
-        \includegraphics[scale=1]{./$1}
+    \begin{figure}[ht!]
+        \includegraphics[width=\textwidth]{./$1}
         \label{$2}
         \caption{$3}
     \end{figure}
@@ -150,7 +150,7 @@ snippet \pgkcircuit include circuittikz
     \usepackage[european,straightvoltages]{circuitikz}
 
 snippet \circuit circuit (requires \usepackage[european,straightvoltages]{circuitikz} also tikz)
-    \begin{figure}[h!]
+    \begin{figure}[ht!]
         \center
         \begin{circuitikz}
             \draw(0,0)
