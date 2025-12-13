@@ -1,169 +1,169 @@
 # General
 snippet \begin begin and end environment 
-    \begin{$1}
-        $2
-    \end{$1}
+  \begin{$1}
+    $2
+  \end{$1}
 
 snippet \figure renders a picture (requires graphicx)
-    \begin{figure}[ht!]
-        \includegraphics[width=\textwidth]{./$1}
-        \label{$2}
-        \caption{$3}
-    \end{figure}
+  \begin{figure}[ht!]
+    \includegraphics[width=\textwidth]{./$1}
+    \label{$2}
+    \caption{$3}
+  \end{figure}
 
 
 snippet \table adds a table
-    \begin{table}[h!]
-        \begin{center}
-            \begin{tabular}{$1}
-                $2
-                \hline
-                $3
-           \end{tabular} 
-        \end{center}
-    \end{table}
+  \begin{table}[ht!]
+    \begin{center}
+      \begin{tabular}{$1}
+        $2
+        \hline
+        $3
+      \end{tabular} 
+    \end{center}
+  \end{table}
 
 snippet \code adds a monospace environment
-    \begin{verbatim}
-    \end{verbatim}
+  \begin{verbatim}
+  \end{verbatim}
 
 snippet ``` adds a monospace environment
-    \begin{verbatim}
-    \end{verbatim}
+  \begin{verbatim}
+  \end{verbatim}
 
 snippet \lstinputlisting adds a code listing from a file directly (requires listing)
-    \lstinputlisting[language=$1]{./$2}
+  \lstinputlisting[language=$1]{./$2}
 
 ## Text Formatting
 
 snippet ** bold text
-    \textbf{$1}
+  \textbf{$1}
 
 snippet * italic text
-    \textit{$1}
+  \textit{$1}
 
 snippet \href link (requires hyperref)
-    \href{$1}{$2}
+  \href{$1}{$2}
 
 snippet \itemize unordered list
-    \begin{itemize}
-        \item   $1
-    \end{itemize}
+  \begin{itemize}
+    \item $1 
+  \end{itemize}
 
 snippet - unordered list
-    \begin{itemize}
-        \item   $1
-    \end{itemize}
+  \begin{itemize}
+    \item $1
+  \end{itemize}
 
 snippet \enumerate ordered list
-    \begin{enumerate}
-        \item   $1
-    \end{enumerate}
+  \begin{enumerate}
+    \item $1
+  \end{enumerate}
 
 snippet 1. ordered list
-    \begin{enumerate}
-        \item   $1
-    \end{enumerate}
+  \begin{enumerate}
+    \item $1
+  \end{enumerate}
 
 snippet \description description list
-    \begin{description}
-        \item   [$1]
-            $2
-    \end{description}
+  \begin{description}
+    \item [$1]
+      $2
+  \end{description}
 
 ## Headings
 
 snippet # Heading 1
-    \section{$1}
+  \section{$1}
 
 snippet ## Heading 2
-    \subsection{$1}
+  \subsection{$1}
 
 snippet ### Heading 3
-    \subsubsection{$1}
+  \subsubsection{$1}
 
 # Math
 #
 snippet _ subtext
-    _{$1}
+  _{$1}
 
 snippet ^ supertext
-    ^{$1}
+  ^{$1}
 
 snippet $ inline equation
-    $$1$
+  $$1$
 
 snippet \equation equation
-    \begin{equation*}
-        $1
-    \end{equation*}
+  \begin{equation*}
+    $1
+  \end{equation*}
 
 snippet \align align math equation (required amsmath)
-    \begin{align*}
-        $1
-    \end{align*}
+  \begin{align*}
+    $1
+  \end{align*}
 
 snippet \frac fraction
-    \frac{$1}{$2}
+  \frac{$1}{$2}
 
 snippet \pmatrix
-    \begin{pmatrix}
-        $1 
-    \end{pmatrix}
+  \begin{pmatrix}
+    $1 
+  \end{pmatrix}
 
 snippet \bmatrix
-    \begin{bmatrix}
-        $1 
-    \end{bmatrix}
+  \begin{bmatrix}
+    $1 
+  \end{bmatrix}
 
 snippet \matrix
-    \begin{matrix}
-        $1 
-    \end{matrix}
+  \begin{matrix}
+    $1 
+  \end{matrix}
 
 # Science
 
-snippet \si SI unit (required suinitx)
-    \SI{$1}{$2}
+snippet \qty SI unit (required suinitx)
+  \qty{$1}{$2}
 
 # Figures and Graphics
 
 snippet \plot plot (required tikz)
-    \begin{tikzpicture}[domain=0:10]
-        \draw[step=0.5, very thin, gray!25] (0, -1) grid (10, 1);
-        \draw[->] (0, -1) -- (0,1) node[right]{$y$};
-        \draw[->] (0, 0) -- (10,0) node[below]{$x$};
+  \begin{tikzpicture}[domain=0:10]
+    \draw[step=0.5, very thin, gray!25] (0, -1) grid (10, 1);
+    \draw[->] (0, -1) -- (0,1) node[right]{$y$};
+    \draw[->] (0, 0) -- (10,0) node[below]{$x$};
 
-        \draw plot (\x,{sin(\x r)});
-    \end{tikzpicture}
+    \draw plot (\x,{sin(\x r)});
+  \end{tikzpicture}
 
 snippet \coord coordinate system (required tikz)
-    \begin{tikzpicture}[domain=-5:5]
-        \draw[step=0.5, very thin, gray!25] (-5, -5) grid (5, 5);
-        \draw[->] (0, -5) -- (0,5) node[right]{$y$};
-        \draw[->] (-5, 0) -- (5,0) node[below]{$x$};
-    \end{tikzpicture}
+  \begin{tikzpicture}[domain=-5:5]
+    \draw[step=0.5, very thin, gray!25] (-5, -5) grid (5, 5);
+    \draw[->] (0, -5) -- (0,5) node[right]{$y$};
+    \draw[->] (-5, 0) -- (5,0) node[below]{$x$};
+  \end{tikzpicture}
 
 # Circuits 
 #
 snippet \pgkcircuit include circuittikz
-    \usepackage[european,straightvoltages]{circuitikz}
+  \usepackage[european,straightvoltages]{circuitikz}
 
 snippet \circuit circuit (requires \usepackage[european,straightvoltages]{circuitikz} also tikz)
-    \begin{figure}[ht!]
-        \center
-        \begin{circuitikz}
-            \draw(0,0)
-                to[V<=$$U_q$] (0,2)
-                to[short] (2,2)
-                to[R=$$R_A$,v=$$U_R$] (2,0)
-                to[short] (0,0);
+  \begin{figure}[ht!]
+    \center
+    \begin{circuitikz}
+      \draw(0,0)
+        to[V<=$$U_q$] (0,2)
+        to[short] (2,2)
+        to[R=$$R_A$,v=$$U_R$] (2,0)
+        to[short] (0,0);
 
-            \draw(2,2)
-                to[short,*-o] (3,2);
-            \draw(2,0)
-                to[short,*-o] (3,0);
-        \end{circuitikz}
-        \label{$1}
-        \caption{$2}
-    \end{figure}
+      \draw(2,2)
+        to[short,*-o] (3,2);
+      \draw(2,0)
+        to[short,*-o] (3,0);
+    \end{circuitikz}
+    \label{$1}
+    \caption{$2}
+  \end{figure}
