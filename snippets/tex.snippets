@@ -163,6 +163,9 @@ snippet \circuit circuit (requires \usepackage[european,straightvoltages]{circui
         to[short,*-o] (3,2);
       \draw(2,0)
         to[short,*-o] (3,0);
+
+      \draw(3,2)
+        to [open, v^=$U_A$] (3,0);
     \end{circuitikz}
     \label{$1}
     \caption{$2}
