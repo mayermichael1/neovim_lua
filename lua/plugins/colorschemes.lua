@@ -9,7 +9,8 @@ return {
     },
     {'sainnhe/gruvbox-material', 
         init = function() 
-            vim.g.gruvbox_material_foreground='material'
+            vim.g.gruvbox_material_foreground='original'
+            vim.g.gruvbox_material_background = 'medium'
             vim.g.gruvbox_material_disable_italic_comment=1
         end
     },
