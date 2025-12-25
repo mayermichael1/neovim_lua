@@ -240,3 +240,8 @@ Then following commands can be used for file searching:
 ```
 
 This search list can be tab expanded and searches all subdirectories.
+
+# TODOs
+
+- [ ] maybe enable texlab for latex? Not quite sure what it does 
+- [ ] maybe install vimtex for writing latex

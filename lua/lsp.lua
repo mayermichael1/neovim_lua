@@ -47,6 +47,12 @@ vim.lsp.config('dartls',
     }
 })
 
+-- vim.lsp.config('texlab',{
+--     cmd = {'texlab'},
+--     filetypes = {'tex'}
+-- })
+-- vim.lsp.enable('texlab')
+
 -- OLD CONFIG:
 
 -- return {
